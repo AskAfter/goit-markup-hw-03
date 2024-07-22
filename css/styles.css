@@ -1,5 +1,9 @@
 
-    
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 :root {
     /* Colors */
     --iris: #4d5ae5;
@@ -18,6 +22,8 @@
     --font-family: "Roboto", sans-serif;
     --second-family: "Raleway", sans-serif;
 
+    --section-margin: 120px;
+
 }
 
 body {
@@ -34,15 +40,49 @@ h4,
 h5,
 h6 {
     font-family: roboto, sans-serif;
+    padding: 0;
+    margin: 0;
+
 }
 a {
     text-decoration: none;
 }
 ul {
     list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+p {
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: 1128px;
+    margin: 0px 15px;
 }
 
 /*Header*/
+
+.navigation,
+.header-address,
+.nav-list,
+.address-list,
+.header-container {
+    display: flex;
+}
+.header-container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
 
 header {
     background-color: var(--white);
@@ -55,6 +95,16 @@ header {
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--iris);
+    margin-right: 76px;
+}
+.nav-list {
+    gap: 40px;
+    
+    flex-basis: calc((100%-2*24px)/3);
+    margin-right: 332px;
+}
+.address-list {
+    gap: 40px;
 }
 
 .logo .logo-studio {
@@ -96,6 +146,12 @@ header {
 .hero {
     background-color: var(--navy-blue);
 }
+.hero > .container {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
 .hero-title {
     font-family: inherit;
     font-weight: 500;
@@ -105,6 +161,8 @@ header {
     line-height: 1.07;
 
     color: var(--white);
+    width: 496px;
+    margin: 188px auto 48px;
 }
 .hero-button {
     background-color: var(--iris);
@@ -115,12 +173,23 @@ header {
     letter-spacing: 0.04em;
     cursor: pointer;
     color: var(--white);
+    width: 169px;
+    height: 56px;
+    margin: 0 auto;
+    padding-top: 16px 32px;
+    border-radius: 4px;
 }
 .hero-button:hover,
 .hero-button:focus {
     background-color: var(--ocean);
 
 }
+
+.hero {
+    margin-bottom: var(--section-margin);
+}
+
+/*First section*/
 
 .section-name {
     font-family: inherit;
