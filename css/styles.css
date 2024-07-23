@@ -201,10 +201,14 @@ img {
 }
 
 /*Second section*/
-
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+
+.preferences-section .container {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .section-name {
@@ -252,10 +256,7 @@ img {
 }
 .preferences-section .list {
     display: flex;
-    min-width: var(--section-width);
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 264px;
+    max-width: var(--section-width);
     gap: 24px;
 }
 
@@ -265,6 +266,8 @@ img {
 
 /*Third section*/
 .team-section > .container {
+    padding-left: 15px;
+    padding-right: 15px;
     display: block;
     max-width: 1440px;
 }
@@ -280,8 +283,6 @@ img {
 .team-list {
     display: flex;
     gap: 24px;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 .team-list-li {
     flex-basis: calc((100% - 72px) / 4);
@@ -325,7 +326,7 @@ img {
 .portfolio-section .container {
     display: block;
     padding-left: 15px;
-        padding-right: 15px;
+    padding-right: 15px;
     /*padding-top: 120px;*/
 }
 
@@ -345,7 +346,6 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    margin-bottom: var(--section-margin);
 }
 
 .portfolio-list-li {
