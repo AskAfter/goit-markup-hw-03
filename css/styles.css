@@ -162,11 +162,7 @@ img {
 }
 .hero > .container {
     display: block;
-    
-    
     max-width: 1440px;
-    
-    
 }
 
 .hero-title {
@@ -203,11 +199,16 @@ img {
 
 }
 
-.hero {
+/*.hero {
     margin-bottom: var(--section-margin);
-}
+}*/
 
 /*Second section*/
+
+.preferences-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .section-name {
     font-family: inherit;
@@ -254,19 +255,16 @@ img {
 }
 .preferences-section .list {
     display: flex;
-    margin-bottom: var(--section-margin);
+    /*margin-bottom: var(--section-margin);*/
     min-width: var(--section-width);
     padding-left: 15px;
     padding-right: 15px;
     width: 264px;
 }
 
-.preferences-section li {
-    margin-right: 24px;
+.preferences-section .list {
+    gap: 24px;
 }
-
-
-
 
 /*Third section*/
 .team-section > .container {
