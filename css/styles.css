@@ -208,15 +208,18 @@ header {
     color: var(--navy-blue);
 }
 
-.hide-header {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
-    padding: 0;
     margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
     border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .subtitle {
@@ -320,7 +323,7 @@ header {
 
 .preferences-section > .container {
     display: block;
-    padding-top: 120px;
+    /*padding-top: 120px;*/
 }
 
 .portfolio-img {
@@ -332,12 +335,25 @@ header {
     min-width: var(--section-width);
     flex-wrap: wrap;
     gap: 24px;
+    margin-bottom: var(--section-margin);
 }
 
 /*Footer*/
 
+.footer .container {
+    display: block;
+    max-width: 1440px;
+    height: 312px;
+    padding-top: 101.5px;
+}
+
 .footer-studio {
     color: var(--cloud);
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 17.5px;
 }
 
 .footer {
@@ -351,4 +367,6 @@ header {
     line-height: calc(24/16);
     letter-spacing: 0.02em;
     color: var(--cloud);
+    display: block;
+    max-width: 264px;
 }
