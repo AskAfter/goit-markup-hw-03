@@ -90,8 +90,7 @@ img {
 .header {
     background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0;
 }
 .logo {
     font-family: var(--second-family);
@@ -105,9 +104,11 @@ img {
 .header-logo {
     margin-right: 76px;
 }
+.navigation {
+    align-items: center;
+}
 .nav-list {
     gap: 40px;
-    align-items: center;
     flex-basis: calc((100%-2*24px)/3);
     margin-right: 332px;
 }
@@ -157,11 +158,12 @@ img {
     background-color: var(--navy-blue);
     padding-top: 188px;
     padding-bottom: 188px;
+    height: 600px;
 }
 .hero > .container {
     display: block;
     
-    height: 600px;
+    
     max-width: 1440px;
     
     
@@ -175,10 +177,9 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     line-height: 1.07;
-
     color: var(--white);
-    width: 496px;
     max-width: 496px;
+    margin: 0 auto 48px;
 }
 .hero-button {
     display: block;
