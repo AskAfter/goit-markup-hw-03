@@ -23,6 +23,7 @@
     --second-family: "Raleway", sans-serif;
 
     --section-margin: 120px;
+    --section-width: 1158px;
 
 }
 
@@ -66,8 +67,10 @@ img {
 }
 
 .container {
-    width: 1128px;
-    margin: 0px 15px;
+    width: var(--section-width);
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*Header*/
@@ -80,8 +83,8 @@ img {
     display: flex;
 }
 .header-container {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding: 24px 15px;
+    margin: 0 auto;
 }
 
 header {
@@ -95,7 +98,6 @@ header {
     line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--iris);
-    margin-right: 76px;
 }
 .nav-list {
     gap: 40px;
@@ -147,12 +149,16 @@ header {
     background-color: var(--navy-blue);
 }
 .hero > .container {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    
     height: 600px;
+    max-width: 1440px;
+    padding-top: 188px;
+    
 }
 
 .hero-title {
+    display: block;
     font-family: inherit;
     font-weight: 500;
     font-size: 56px;
@@ -162,9 +168,10 @@ header {
 
     color: var(--white);
     width: 496px;
-    margin: 188px auto 48px;
+    margin: 0 auto 48px;
 }
 .hero-button {
+    display: block;
     background-color: var(--iris);
     font-family: inherit;
     font-size: 16px;
@@ -175,9 +182,9 @@ header {
     color: var(--white);
     width: 169px;
     height: 56px;
-    margin: 0 auto;
     padding-top: 16px 32px;
     border-radius: 4px;
+    margin: 0 auto;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -189,7 +196,7 @@ header {
     margin-bottom: var(--section-margin);
 }
 
-/*First section*/
+/*Second section*/
 
 .section-name {
     font-family: inherit;
@@ -201,6 +208,17 @@ header {
     color: var(--navy-blue);
 }
 
+.hide-header {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .subtitle {
     font-family: inherit;
     font-size: 20px;
@@ -208,6 +226,8 @@ header {
     letter-spacing: 0.02em;
     line-height: 1.2;
     color: var(--navy-blue);
+    margin-bottom: 8px;
+    width: 264px;
 }
 
 .list .explanation {
@@ -218,22 +238,65 @@ header {
     letter-spacing: 0.02em;
     color: var(--slate);
 }
+.preferences-section .list {
+    display: flex;
+    margin-bottom: var(--section-margin);
+    min-width: var(--section-width);
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 264px;
+}
+
+.preferences-section li {
+    margin-right: 24px;
+}
+
+
+
 
 /*Third section*/
+.team-section > .container {
+    display: block;
+    height: 732px;
+    max-width: 1440px;
+    padding-top: 120px;
+    margin-bottom: var(--section-margin);
+}
 .team-section {
     background-color: var(--cloud);
 }
 .team-section .section-name {
     line-height: 1.11;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 .team-list {
+    display: flex;
+    gap: 24px;
+}
+.team-list-li {
     background-color: var(--white);
 }
+
+.li-img {
+    margin-bottom: 32px;
+
+}
+
+
+
+.team-list-li > .subtitle
+{
+    margin-bottom: 8px;
+    text-align: center;
+}
+
 .job {
     font: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 /*Fourth section*/
@@ -241,11 +304,34 @@ header {
 .portfolio-name {
     text-transform: capitalize;
     line-height: 1.11;
+    margin-bottom: 72px;
+}
+.portfolio-section .subtitle {
+    margin-bottom: 8px;
+    margin-left: 16px;
 }
 .portfolio-text {
     font-family: inherit;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 32px;
+    margin-left: 16px;
+}
+
+.preferences-section > .container {
+    display: block;
+    padding-top: 120px;
+}
+
+.portfolio-img {
+    margin-bottom: 32px;
+}
+
+.portfolio-list {
+    display: flex;
+    min-width: var(--section-width);
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
 /*Footer*/
