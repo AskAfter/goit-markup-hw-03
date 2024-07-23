@@ -107,12 +107,13 @@ img {
 }
 .nav-list {
     gap: 40px;
-    
+    align-items: center;
     flex-basis: calc((100%-2*24px)/3);
     margin-right: 332px;
 }
 .address-list {
     gap: 40px;
+    
 }
 
 .logo .logo-studio {
@@ -128,6 +129,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--navy-blue);
     line-height: calc(24/16);
+    
 }
 .header-links:hover,
 .header-links:focus {
@@ -153,13 +155,15 @@ img {
 /*Hero section*/
 .hero {
     background-color: var(--navy-blue);
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 .hero > .container {
     display: block;
     
     height: 600px;
     max-width: 1440px;
-    padding-top: 188px;
+    
     
 }
 
@@ -174,7 +178,7 @@ img {
 
     color: var(--white);
     width: 496px;
-    margin: 0 auto 48px;
+    max-width: 496px;
 }
 .hero-button {
     display: block;
@@ -186,7 +190,7 @@ img {
     letter-spacing: 0.04em;
     cursor: pointer;
     color: var(--white);
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     padding-top: 16px 32px;
     border-radius: 4px;
